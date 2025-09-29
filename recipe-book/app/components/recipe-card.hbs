@@ -1,0 +1,7 @@
+<div class="recipe-overview" {{ on "click" this.toggleExpand }}>
+  <!-- this is a prop -->
+  <h3>{{@title}}</h3>
+  {{#if this.isExpanded}}
+    <p class="recipe-detail">{{@description}}</p><
+  {{/if}}
+</div>

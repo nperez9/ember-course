@@ -3,11 +3,12 @@
 <h1>Recipes</h1>
 
 {{#each @model as |recipe| }}
-  <!-- Magic stuff, use uppercase on the component name to call it -->
+  {{!-- Magic stuff, use uppercase on the component name to call it --}}
   <RecipeCard 
     @title={{recipe.title}} 
     @description={{recipe.description}} 
     @ingredients={{recipe.ingredients}} 
-    @instructions={{recipe.instructions}} 
+    @instructions={{recipe.instructions}}
+    @id={{recipe.id}}
   />
 {{/each}}

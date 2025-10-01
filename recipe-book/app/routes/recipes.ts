@@ -1,9 +1,11 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
+import type RecipeDataService from 'recipe-book/services/recipe-data';
+import type Store from '@ember-data/store';
 
 export default class RecipesRoute extends Route {
-  @service store: any;
-  @service recipeData: any;
+  @service declare store: Store;
+  @service declare recipeData: RecipeDataService;
 
   async model() {
     await this.recipeData.loadRecipes();
